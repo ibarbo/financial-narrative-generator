@@ -1,0 +1,18 @@
+# Ignorar entorno virtual
+venv/
+.venv/
+
+# Ignorar archivos específicos de Python
+__pycache__/
+*.pyc
+*.ipynb_checkpoints/
+
+# Ignorar archivos de claves API y configuración sensible
+.env
+
+# Ignorar archivos de Streamlit generados localmente
+.streamlit/
+
+# Ignorar archivos de datos si no quieres que sean parte del repo público (opcional)
+# datos_porcinos.csv
+# datos_porcinos_variante.csv
