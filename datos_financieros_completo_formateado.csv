@@ -1,0 +1,48 @@
+metrica,valor
+Ingresos Totales,50000000
+Ventas de Cerdos de Engorde,48500000
+Otros Ingresos Operacionales,1500000
+Costo Alimento Balanceado,31000000
+Costo Medicamentos y Vacunas,2200000
+Costo Mano de Obra Directa,5200000
+Otros Costos Directos Produccion,3500000
+Utilidad Bruta Operacional,8100000
+Gastos Personal Administrativo,2500000
+Arrendamientos,1000000
+Servicios Publicos Admin,500000
+Gastos Depreciacion,800000
+Otros Gastos Administrativos,700000
+Utilidad Operacional,2600000
+Gastos Financieros,300000
+Ingresos Financieros,50000
+Utilidad Antes de Impuestos,2350000
+Provision Impuesto de Renta,705000
+Utilidad Neta del Periodo,1645000
+Efectivo y Equivalentes de Efectivo,3500000
+Cuentas por Cobrar Clientes,7000000
+Inventarios,12000000
+Otros Activos Corrientes,1500000
+Terrenos,15000000
+Edificios y Construcciones,10000000
+Maquinaria y Equipo,8000000
+Vehiculos,3000000
+Depreciacion Acumulada,5000000
+Total Activos,55000000
+Proveedores,6500000
+Obligaciones Financieras Corto Plazo,2000000
+Impuestos por Pagar,705000
+Otros Pasivos Corrientes,800000
+Obligaciones Financieras Largo Plazo,10000000
+Total Pasivos,20005000
+Total Patrimonio,35000000
+Cantidad Cerdos Vendidos,9700
+Peso Promedio Venta (kg),95
+FCR (Relacion Conversion Alimento),3.0
+Mortalidad (%),4.0
+Dias Cuentas por Cobrar,40
+Dias Cuentas por Pagar,60
+Rotacion Inventario Dias,120
+Margen Bruto Operacional (%),16.20
+Margen Neto (%),3.29
+Razon Corriente (Liquidez),2.40
+Nivel de Endeudamiento (Pasivo/Activo),0.36
