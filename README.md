@@ -1,112 +1,121 @@
-# 📊 Generador de Narrativas Financieras (MVP)
-
-Este proyecto es un **Producto Mínimo Viable (MVP)** de una herramienta innovadora diseñada para transformar datos contables y operativos complejos en narrativas financieras claras y personalizadas, adaptadas para diferentes tipos de stakeholders (interesados). Su objetivo principal es resolver el desafío común de comunicar información financiera a audiencias no técnicas, como gerentes de producción, inversores o miembros de la junta directiva.
+# 📊 Financial Narrative Generator (MVP)
 
 ---
 
-## 🌟 ¿Por qué este proyecto?
+## 🚀 Overview
 
-En el ámbito contable, es frecuente que los informes financieros, aunque precisos, sean difíciles de comprender para aquellos sin formación específica. Este MVP aborda esta brecha de comunicación, utilizando la inteligencia artificial (Modelos de Lenguaje Grandes - LLM) para generar textos explicativos que son relevantes y comprensibles para cada perfil de interesado, facilitando así una toma de decisiones más informada.
+The **Financial Narrative Generator** is an innovative project designed to bridge the communication gap between complex financial data and non-technical stakeholders. It transforms raw accounting and operational figures into clear, concise, and personalized narratives using Artificial Intelligence.
 
----
-
-## 🚀 Características del MVP
-
-* **Carga de Datos CSV:** Permite cargar archivos CSV simples con métricas financieras y operativas.
-* **Perfiles de Stakeholders:** Incluye perfiles predefinidos (inicialmente para **Gerente de Producción de Industria Porcina** y **Inversor General**) para adaptar el tono y las métricas relevantes en la narrativa.
-* **Generación de Narrativa con IA:** Utiliza la API de OpenAI (o similar) para redactar informes comprensibles.
-* **Interfaz de Usuario Sencilla (Streamlit):** Una aplicación web interactiva y fácil de usar para cargar datos y generar informes con pocos clics.
+This Minimum Viable Product (MVP) focuses on the **porcine industry** to demonstrate its core value proposition: making financial reports understandable for diverse audiences, such as farm production managers, general managers, investors, and even field personnel.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## ✨ Key Features (MVP)
 
-* **Python:** Lenguaje de programación principal para la lógica del proyecto.
-* **Pandas:** Para el procesamiento y manipulación de datos.
-* **Streamlit:** Para construir la interfaz de usuario web interactiva.
-* **OpenAI API:** Para acceder a los Modelos de Lenguaje Grandes (LLM) que generan las narrativas.
-* **python-dotenv:** Para la gestión segura de las claves API.
+* **CSV Data Ingestion**: Easily upload financial and operational data via a simple CSV file with `metrica` and `valor` columns.
+* **Stakeholder-Specific Narratives**: Generate tailored reports based on the selected audience (e.g., Gerente de Producción, Inversor General, Gerente General/Dueño, Personal de Campo).
+* **AI-Powered Explanations**: Utilizes OpenAI's language models (`gpt-3.5-turbo` for cost-efficiency) to translate numerical data into human-readable insights.
+* **Intuitive User Interface**: Built with Streamlit for a simple, interactive web application experience.
+* **Clear Feedback**: Provides success messages, clear error handling, and loading indicators for a smoother user experience.
+* **Easy Reset**: A "Limpiar y Reiniciar" (Clear and Reset) button allows users to quickly prepare for a new report generation.
 
 ---
 
-## ⚙️ Configuración del Entorno de Desarrollo
+## 🎯 The Problem Solved
 
-Sigue estos pasos para poner en marcha el proyecto en tu máquina local:
+Traditional financial reports, while accurate, are often dense with jargon, codes, and numerical tables that are difficult for non-accountants to interpret. This leads to:
+* Misunderstandings and confusion among stakeholders.
+* Suboptimal decision-making due to unclear financial context.
+* Increased workload for accountants who manually translate and explain reports for different audiences.
 
-1.  **Clona este Repositorio:**
+Our solution empowers accountants to deliver **impactful financial insights** effortlessly, fostering better understanding and more informed decisions across the organization.
+
+---
+
+## 🛠️ Technical Stack
+
+* **Python**: The core programming language.
+* **Streamlit**: For building the interactive web user interface.
+* **Pandas**: For efficient data manipulation and processing of CSV files.
+* **OpenAI API**: To access powerful Large Language Models (LLMs) for narrative generation.
+* **`python-dotenv`**: For secure management of API keys and environment variables.
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally:
+
+### Prerequisites
+
+* Python 3.8+ installed.
+* An OpenAI API Key.
+
+### Installation
+
+1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/TU_USUARIO_GITHUB/financial-narrative-generator.git](https://github.com/TU_USUARIO_GITHUB/financial-narrative-generator.git)
+    git clone [https://github.com/your-username/financial-narrative-generator.git](https://github.com/your-username/financial-narrative-generator.git)
     cd financial-narrative-generator
     ```
-    *(Nota: Reemplaza `TU_USUARIO_GITHUB` con tu nombre de usuario real en GitHub cuando hayas creado el repositorio.)*
 
-2.  **Crea y Activa un Entorno Virtual (Recomendado):**
+2.  **Create a virtual environment** (recommended):
     ```bash
     python -m venv venv
-    # En Windows:
-    .\venv\Scripts\activate
-    # En macOS/Linux:
-    source venv/bin/activate
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
-3.  **Instala las Dependencias:**
+3.  **Install dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
-    *(**Importante:** Primero necesitas crear el archivo `requirements.txt`. Ejecuta `pip freeze > requirements.txt` después de instalar todas las dependencias como `pandas`, `openai`, `streamlit`, `python-dotenv`.)*
+    *(Note: You might need to create a `requirements.txt` file by running `pip freeze > requirements.txt` after installing `streamlit`, `pandas`, `openai`, `python-dotenv` if it's not already present)*.
 
-4.  **Configura tu Clave API de OpenAI:**
-    * Obtén tu clave API en [platform.openai.com](https://platform.openai.com/).
-    * Crea un archivo llamado `.env` en la raíz de tu proyecto (al mismo nivel que `app.py`) y añade tu clave:
+4.  **Set up your OpenAI API Key**:
+    * Create a file named `.env` in the root directory of your project.
+    * Add your OpenAI API key to this file:
         ```
-        OPENAI_API_KEY="tu_clave_api_aqui"
+        OPENAI_API_KEY="your_openai_api_key_here"
         ```
-    * **¡Nunca subas este archivo `.env` a GitHub!** Se recomienda añadirlo a tu `.gitignore`.
+        **Never commit your `.env` file to version control.** Make sure it's included in your `.gitignore`.
 
----
+### Running the Application
 
-## 🚀 Cómo Ejecutar el MVP
-
-1.  **Prepara tus Datos:**
-    * Crea un archivo CSV con tus datos financieros y operativos. Puedes usar `datos_porcinos.csv` o `datos_porcinos_variante.csv` como ejemplos. Asegúrate de que tenga una columna `metrica` y una columna `valor`.
-        ```csv
-        metrica,valor
-        Ingresos Totales,50000000
-        Costo Alimento,30000000
-        ...
-        ```
-
-2.  **Inicia la Aplicación Streamlit:**
+1.  **Start the Streamlit application**:
     ```bash
     streamlit run app.py
     ```
-
-3.  **Interactúa con la Interfaz:**
-    * Tu navegador web se abrirá automáticamente en `http://localhost:8501`.
-    * Sube tu archivo CSV en la sección "Paso 2".
-    * Selecciona el tipo de stakeholder en la sección "Paso 3".
-    * Haz clic en "Generar Informe Narrativo" en el "Paso 4" para ver la magia.
+2.  Your browser will automatically open a new tab with the Streamlit application (usually at `http://localhost:8501`).
 
 ---
 
-## 📈 Futuras Mejoras (Roadmap del Producto)
+## 🧪 How to Use
 
-Este MVP es solo el comienzo. Las futuras fases podrían incluir:
-
-* Gestión dinámica de perfiles de stakeholders y plantillas de narrativa.
-* Soporte para múltiples tipos de industrias y formatos de datos.
-* Análisis de tendencias, comparativas inter-periodo y gráficos integrados.
-* Integraciones con sistemas contables y ERPs.
-* Funcionalidades de colaboración y exportación de informes.
-
----
-
-## 🤝 Contribuciones
-
-Este proyecto es de código abierto (en su fase de MVP). ¡Las contribuciones son bienvenidas! Si tienes ideas o mejoras, no dudes en abrir un *issue* o enviar un *pull request*.
+1.  **Prepare your data**: Ensure your CSV file has exactly two columns: `metrica` and `valor`. For numerical values, remove any thousand separators (e.g., `1000000` instead of `1,000,000`).
+    * You can use the provided example file: `datos_financieros_completo_formateado.csv`
+2.  **Upload the CSV**: Click on the file uploader in the Streamlit app to select your CSV.
+3.  **Specify Industry**: Enter the industry relevant to your data (e.g., "Porcina").
+4.  **Select Stakeholder Profile**: Choose the audience for whom you want to generate the report (e.g., "Gerente de Producción", "Inversor General").
+5.  **Generate Report**: Click the "Generar Informe" button. The AI will process the data and display the narrative.
+6.  **Review and Reset**: Read the generated narrative. Use the "Limpiar y Reiniciar la Aplicación" button to clear the current session and start a new report.
 
 ---
 
-## 📧 Contacto
+## 🛣️ Future Enhancements (Roadmap)
 
-Para preguntas o soporte, por favor contacta a [Tu Correo Electrónico o LinkedIn].
+This MVP is just the beginning. Our vision includes:
+
+* **Advanced Data Ingestion**: Handling more complex CSV formats directly, reducing manual pre-processing.
+* **Custom Stakeholder Profiles**: Allowing users to define and save their own stakeholder profiles and reporting preferences.
+* **Interactive Q&A**: Enabling users to ask natural language questions about their financial data.
+* **Text-to-Speech (TTS)**: Integrating audio generation so users can listen to their reports.
+* **Visualizations**: Generating simple charts and graphs within the interface to complement the narratives.
+* **Presentation Integration**: Facilitating the export of key insights for presentation slides.
+
+---
+
+## 🤝 Contribution & Feedback
+
+We welcome your feedback and suggestions! This project is being developed collaboratively to build a valuable solution for accountants and businesses.
+
+---
