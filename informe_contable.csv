@@ -1,0 +1,38 @@
+metrica,valor
+Ingresos Totales,50000000
+Costo Alimento,31000000
+Costo Salud Animal,2200000
+Costo Mano Obra,5200000
+Otros Costos Directos Produccion,3500000
+Utilidad Bruta,8100000
+Gastos Administracion y Ventas,5500000
+Utilidad Operacional,2600000
+Gastos Financieros,300000
+Ingresos Financieros,50000
+Utilidad Antes de Impuestos,2350000
+Impuesto de Renta,705000
+Utilidad Neta del Periodo,1645000
+Efectivo y Equivalentes,3500000
+Cuentas por Cobrar Clientes,7000000
+Inventarios,12000000
+Activos No Corrientes Netos,31000000
+Total Activos,55000000
+Proveedores,6500000
+Obligaciones Financieras Corto Plazo,2000000
+Impuestos por Pagar,705000
+Obligaciones Financieras Largo Plazo,10000000
+Total Pasivos,20005000
+Total Patrimonio,35000000
+Cantidad Cerdos Vendidos,9700
+Peso Promedio Venta (kg),95
+FCR (Relacion Conversion Alimento),3.0
+Mortalidad (%),4.0
+Costo por Cerdo Vendido,4319
+Precio Venta Promedio por Kg,515
+Dias Cuentas por Cobrar,40
+Dias Cuentas por Pagar,60
+Rotacion Inventario Dias,120
+Margen Bruto Operacional (%),16.2
+Margen Neto (%),3.29
+Razon Corriente (Liquidez),2.4
+Nivel de Endeudamiento (Pasivo/Activo),0.36

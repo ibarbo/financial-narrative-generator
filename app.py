@@ -63,26 +63,36 @@ def generar_prompt(datos, perfil):
     formato_datos_prompt = []
     for k, v in datos_relevantes.items():
         if isinstance(v, (int, float)):
+            # Formateo específico para FCR y % de Mortalidad (sin miles)
             if k in ["FCR (Relación Conversión Alimento)", "Mortalidad (%)"]:
-                formato_datos_prompt.append(f"- {k}: {v}") # Porcentajes o FCR sin formato de miles
+                formato_datos_prompt.append(f"- {k}: {v:.1f}") # Un decimal para estos
             else:
                 formato_datos_prompt.append(f"- {k}: {v:,.0f}") # Números grandes con formato de miles
         else:
             formato_datos_prompt.append(f"- {k}: {v}")
 
     prompt = f"""
-    Eres un analista financiero experto. Tu tarea es generar una narrativa concisa y clara de los resultados financieros y operativos para un **{perfil['nombre_display']}**.
+    Eres un **analista financiero senior y experto en la industria del sector porcino** para {st.session_state.tipo_empresa_seleccionada}. Tu objetivo es transformar los datos financieros y operativos en una **narrativa clara, concisa y procesable** para un **{perfil['nombre_display']}**.
 
-    **Contexto de la Empresa:** {st.session_state.tipo_empresa_seleccionada}
-    **Datos del Período:**
+    **Instrucciones Clave para la Generación de la Narrativa:**
+
+    1.  **Audiencia:** Dirígete específicamente al "{perfil['nombre_display']}".
+    2.  **Tono:** El tono debe ser {perfil['tono']}. Evita la jerga contable compleja; si usas un término técnico, explícalo brevemente de forma sencilla.
+    3.  **Enfoque Principal:** La narrativa debe {perfil['enfoque_narrativa']}.
+    4.  **Métricas Clave:** Incorpora y explica el significado de las siguientes métricas, que son las más relevantes para esta audiencia: {', '.join(perfil['metricas_clave'])}.
+    5.  **Estructura:**
+        * **Párrafo 1 (Resumen Ejecutivo):** Inicia con un resumen general del desempeño del período, destacando los ingresos y la utilidad bruta.
+        * **Párrafo 2 (Análisis de Costos Clave):** Detalla los principales costos (especialmente alimento y salud animal), explicando su impacto. Para el gerente de producción, vincula esto con eficiencia.
+        * **Párrafo 3 (Métricas Operativas/Eficiencia):** Para el gerente de producción, enfócate en FCR y Mortalidad, explicando su implicación. Para el inversor, en márgenes y crecimiento.
+        * **Párrafo 4 (Conclusiones y Próximos Pasos):** Ofrece una conclusión breve y, si aplica, sugerencias de áreas de enfoque sin ser prescriptivo (ej. "identificar oportunidades de mejora").
+    6.  **Extensión:** La narrativa debe tener entre 4 y 5 párrafos.
+    7.  **Precisión:** Asegúrate de que todos los datos numéricos mencionados sean exactamente los proporcionados. No inventes cifras ni tendencias que no estén implícitas en los datos. No incluyas información de periodos anteriores si no está explícitamente en los datos proporcionados.
+    8.  **Formato:** Utiliza lenguaje natural, como si fuera escrito por un humano.
+
+    **Datos Financieros y Operativos del Período Actual:**
     {chr(10).join(formato_datos_prompt)}
 
-    **Objetivo del Lector:** {perfil['objetivo']}
-    **Métricas Clave a Resaltar:** {', '.join(perfil['metricas_clave'])}
-    **Tono de la Narrativa:** {perfil['tono']}
-    **Enfoque de la Narrativa:** {perfil['enfoque_narrativa']}
-
-    Por favor, redacta un informe en lenguaje natural que sea fácil de entender, evitando la jerga contable excesiva. Concéntrate en las métricas clave y su impacto. La extensión debe ser de 3-5 párrafos.
+    Genera ahora la narrativa del informe.
     """
     return prompt
 

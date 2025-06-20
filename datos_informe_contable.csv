@@ -1,0 +1,23 @@
+Cuenta/Métrica,Código,Valor (COP),Notas
+INGRESOS OPERACIONALES,,,
+Ventas de Cerdos de Engorde,413501,"$48,500,000","Venta de 9,700 cerdos"
+Otros Ingresos Operacionales,417501,"$1,500,000","Venta de lechones, abono, etc."
+Total Ingresos Operacionales,,"$50,000,000",
+,,,
+COSTOS DE PRODUCCIÓN,,,
+Costo de Alimento Balanceado,720101,"$31,000,000",Compra y consumo de alimento
+Costo de Medicamentos y Vacunas,720201,"$2,200,000",Insumos para salud animal
+Costo de Mano de Obra Directa,720301,"$5,200,000",Salarios de personal de granja
+Otros Costos Directos,720401,"$3,500,000","Energía, agua, servicios veterinarios"
+Total Costos de Producción,,"$41,900,000",
+,,,
+UTILIDAD BRUTA OPERACIONAL,,"$8,100,000",(Ingresos - Costos de Producción)
+,,,
+MÉTRICAS OPERATIVAS CLAVE,,,
+Cerdos Vendidos,,"9,700 unidades",
+Peso Promedio Venta (kg/cerdo),,95 kg,Peso promedio al momento de la venta
+FCR (Relación Conversión Alimento),,3,kg alimento / kg carne producido
+Mortalidad (%),,4.00%,% de muertes sobre el total de cerdos
+Costo por Cerdo Vendido,,"$4,319",(Total Costos Prod. / Cerdos Vendidos)
+Precio Venta Promedio por Kg,,$515,(Ingresos Totales / (Cerdos Vendidos * Peso Promedio))
+Días de Inventario de Alimento,,45 días,Rotación de inventario de alimento
